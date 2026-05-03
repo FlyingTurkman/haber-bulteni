@@ -1,0 +1,299 @@
+
+
+
+:root {
+    --primary: oklch(42.4% 0.199 265.638);
+    --primary-foreground: oklch(96.7% 0.003 264.542);
+    --secondary: oklch(86.9% 0.022 252.894);
+    --secondary-foreground: oklch(14.7% 0.004 49.25);
+    --destructive: oklch(44.4% 0.177 26.899);
+    --destructive-foreground: oklch(97% 0.001 106.424);
+    --background: oklch(96.8% 0.007 247.896);
+    --border: oklch(87.2% 0.01 258.338);
+    --muted: oklch(44.6% 0.03 256.802);
+}
+
+html, body {
+    background-color: var(--background);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+header {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    border-bottom: 1px solid var(--border);
+}
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+a {
+    all: unset;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo {
+    color: var(--primary-foreground);
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.logo > img {
+    object-fit: contain;
+    width: 80%;
+    object-position: center;
+    padding-top: 8px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+nav > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px 8px 16px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
+    margin-right: 16px;
+    font-size: 12px;
+    color: var(--primary);
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+
+nav > div:last-child {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px 0 16px;
+    gap: 16px;
+}
+
+nav > div:last-child > a {
+    border-bottom: 4px solid transparent;
+    padding: 8px 0 8px 0;
+    transition: ease-in-out;
+    transition-duration: 300ms;
+}
+
+nav > div:last-child > a:hover {
+    border-bottom: 4px solid var(--border);
+}
+
+nav > div:last-child > button {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+}
+
+button {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    margin-left: auto;
+}
+
+button:active {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+button:focus {
+    outline: none;
+}
+
+nav > div:last-child > button {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    aspect-ratio: 1;
+}
+
+section {
+    position: relative;
+    background-image: url('/assets/hero-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+section > div:first-child {
+    color: var(--primary-foreground);
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+}
+
+section > div:first-child a {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 8px 16px;
+    display: inline-block;
+    margin: 8px 0;
+    border-radius: 32px;
+}
+
+section > div:last-child {
+    overflow: hidden;
+}
+
+section > div:last-child img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(12.5%);
+    width: auto;
+    max-width: 40vw;
+    top: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    gap: 24px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 50%;
+}
+
+.about > h2 {
+    color: var(--primary);
+}
+
+.about > p {
+    color: var(--muted);
+}
+
+.about > a {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    display: inline-block;
+    width: auto;
+    margin-right: auto;
+    padding: 8px 16px;
+    border-radius: 32px;
+}
+
+
+input {
+    outline: none;
+    border: 0;
+}
+
+.subs > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    background-color: white;
+    border-radius: 24px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+
+.subs > form > input {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    height: 100%;
+    padding: 8px 16px 8px;
+    margin-left: 16px;
+    font-size: 24px;
+}
+
+.subs > form > button {
+    display: flex;
+    border-radius: 24px;
+    height: 24px;
+    width: 128px;
+    padding: 8px 16px 8px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-top: 1px solid var(--border);
+    padding: 2% 10% 2% 10%;
+}
+
+footer > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+footer > div:first-child > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+    flex-basis: 1/3;
+    padding: 4px;
+}
+
+footer > div:first-child > div > svg {
+    margin-bottom: 16px;
+}
+
+hr {
+    border: 1px solid var(--border);
+}
+
+footer > p {
+    text-align: center;
+}

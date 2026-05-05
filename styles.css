@@ -1,5 +1,11 @@
 
-
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
 
 :root {
     --primary: oklch(42.4% 0.199 265.638);
@@ -15,14 +21,6 @@
 
 html, body {
     background-color: var(--background);
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    outline: none;
 }
 
 header {
@@ -260,7 +258,7 @@ section > div:last-child img {
 main {
     display: flex;
     flex-direction: column;
-    margin: 10%;
+    margin-top: 10%;
     gap: 24px;
 }
 
@@ -269,6 +267,8 @@ main {
     flex-direction: column;
     gap: 24px;
     width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .about > h2 {
@@ -294,6 +294,26 @@ input {
     border: 0;
 }
 
+.subs {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--secondary);
+}
+
+.subs > p {
+    text-align: center;
+    color: var(--secondary-foreground);
+}
+
+.subs > h2 {
+    text-align: center;
+    color: var(--primary);
+}
+
 .subs > form {
     display: flex;
     flex-direction: row;
@@ -301,9 +321,8 @@ input {
     justify-content: stretch;
     background-color: white;
     border-radius: 24px;
-    width: 80%;
+    width: 50%;
     margin: auto;
-    margin-top: 10%;
 }
 
 
@@ -314,8 +333,9 @@ input {
     height: 100%;
     padding: 8px 16px 8px;
     margin-left: 16px;
-    font-size: 24px;
+    font-size: 18px;
 }
+
 
 .subs > form > button {
     display: flex;

@@ -133,12 +133,14 @@
                 </i>
             </p>
             <form
+            id="subs-form"
             autocomplete="off"
             >
                 <input
                 type="email"
                 name="email"
                 placeholder="E-posta adresinizi yazınız..."
+                required
                 />
                 <button>
                     Abone Ol
@@ -146,6 +148,27 @@
             </form>
         </div>
     </main>
+    <div
+    id="alert-message"
+    class="alert-message"
+    >
+        <div>
+            <label>
+                İşlem Başarılı
+            </label>
+            <hr/>
+            <p
+            id="alert-message-content"
+            >
+                
+            </p>
+            <button
+            id="alert-message-close-button"
+            >
+                Kapat
+            </button>
+        </div>
+    </div>
 </body>
 <footer>
     <div>
@@ -191,4 +214,5 @@
         Bu sitede yer alan tüm yazılı, görsel ve uygulama içerikleri kaynak gösterilmeden kullanılamaz. Site içerisinde sunulan bilgiler yalnızca bilgilendirme amacıyla hazırlanmış olup, bu bilgilerin kullanımından doğabilecek her türlü sorumluluk kullanıcıya aittir. Siteye erişim sağlayan kullanıcılar, bu şartları okumuş, anlamış ve kabul etmiş sayılır.
     </p>
 </footer>
+
 </html>

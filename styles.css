@@ -119,9 +119,10 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1 / 1;
     background-color: var(--primary);
     color: var(--primary-foreground);
+    padding: 4px 8px 4px 8px;
+    border-radius: 16px;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
@@ -339,7 +340,8 @@ input {
 
 .subs > form > button {
     display: flex;
-    border-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
     height: 24px;
     width: 128px;
     padding: 8px 16px 8px;
@@ -383,4 +385,54 @@ hr {
 
 footer > p {
     text-align: center;
+}
+
+
+.alert-message {
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: rgb(from var(--background) r g b / 0.3);
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    transition: ease-in-out;
+    transition-duration: 100ms;
+}
+
+.message-active {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.alert-message > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background-color: white;
+    width: 50%;
+    height: auto;
+}
+
+.alert-message > div > label {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.alert-message > div > button {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    height: auto;
 }

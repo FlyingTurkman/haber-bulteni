@@ -108,11 +108,7 @@ nav > div:last-child > a:hover {
 
 
 
-nav > div:last-child > button {
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
-}
+
 
 button {
     all: unset;
@@ -129,6 +125,13 @@ button {
     margin-left: auto;
     transition: ease-in-out;
     transition-duration: 50ms;
+}
+
+nav > div:last-child > button {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+
 }
 
 button:hover {
@@ -173,7 +176,7 @@ nav > div:last-child > div {
     transition-duration: 100ms;
     border-radius: 16px;
     border: 1px solid var(--border);
-    box-shadow: black 0px 4px 10px;
+    box-shadow: 0px 5px 20px black;
     z-index: 9999;
 }
 
@@ -194,20 +197,20 @@ nav > div:last-child > div {
 }
 
 .dropdown-menu > button {
-    border-radius: 100%;
+    border-radius: 16px;
     display: flex;
-    pad: 4px;
-    width: 32px;
-    aspect-ratio: 1/1;
+    flex-direction: row;
+    gap: 8px;
 }
 
 nav > div:last-child > div > button {
     background-color: var(--secondary);
     color: var(--secondary-foreground);
-    border-radius: 36px;
-    width: 36px;
-    height: 36px;
-    aspect-ratio: 1;
+    border-radius: 32px;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    aspect-ratio: 1 / 1;
 }
 
 section {

@@ -215,7 +215,7 @@ nav > div:last-child > div > button {
 
 section {
     position: relative;
-    background-image: url('/assets/hero-bg.webp');
+    background-image: url('assets/hero-bg.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
